@@ -33,7 +33,7 @@ CREATE TABLE stores (
     store_number    VARCHAR2(30) NOT NULL,
     brand_name      VARCHAR2(30) NOT NULL,
     ownership_ship  VARCHAR2(30) NOT NULL,
-    store_name      VARCHAR2(100),
+    store_name      VARCHAR2(100) NOT NULL,
     city_name       VARCHAR2(50) NOT NULL
 );
 
