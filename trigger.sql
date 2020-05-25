@@ -28,6 +28,3 @@ IF ( count_visits_store > 0) THEN
 END IF;
 end;
 
-UPDATE stores
-SET store_name = 'Nation'
-WHERE store_name='Nation Towers';
