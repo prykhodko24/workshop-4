@@ -5,7 +5,7 @@ CURSOR VISITS_T1 IS
 
 
 CURSOR f_t IS
-		select PEOPLE_NAME,COUNTRY_NAME from table(visiter_country('UA','UA')) t;
+		select PEOPLE_NAME,COUNTRY_NAME from table(visiter_country('UA','USA')) t;
 begin
 --add_visit( 'Vovas','22331-212326' ,Date '2013-10-25');
 
