@@ -1,9 +1,9 @@
 CREATE OR REPLACE PACKAGE package_f_p AS
-    type TypeFunkObject is record
+    type TypeFuncObject is record
     (PEOPLE_NAME varchar2(500),
     COUNTRY_NAME varchar2(10));
  
-    type TypeFunkList is table of TypeFunkObject;
+    type TypeFuncList is table of TypeFuncObject;
     
     PROCEDURE add_visit( visitors_name VARCHAR2,
         stores_number VARCHAR2,
@@ -11,14 +11,14 @@ CREATE OR REPLACE PACKAGE package_f_p AS
     
     
     FUNCTION visiter_country(counry1 in varchar2,country2 in varchar2)
-    return TypeFunkList pipelined;
+    return TypeFuncList pipelined;
     
 END package_f_p;
 /
 CREATE OR REPLACE PACKAGE BODY package_f_p  AS
 
 FUNCTION visiter_country(counry1 in varchar2,country2 in varchar2)
-          return TypeFunkList pipelined as
+          return TypeFuncList pipelined as
 begin
   for i in (
     SELECT COUNTRY.COUNTRY_NAME,PEOPLE.PEOPLE_NAME
